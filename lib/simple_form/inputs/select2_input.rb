@@ -1,4 +1,4 @@
-class Select2Input < SimpleForm::Inputs::CollectionSelectInput
+class SimpleForm::Inputs::Select2Input < SimpleForm::Inputs::CollectionSelectInput
   extend ActiveSupport::Autoload
 
   def input_html_options

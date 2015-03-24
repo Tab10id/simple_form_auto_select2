@@ -1,4 +1,4 @@
-class AjaxSelect2Input < SimpleForm::Inputs::StringInput
+class SimpleForm::Inputs::AjaxSelect2Input < SimpleForm::Inputs::StringInput
   extend ActiveSupport::Autoload
 
   def input_html_options
