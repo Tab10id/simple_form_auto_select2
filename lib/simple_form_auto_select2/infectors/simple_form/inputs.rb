@@ -6,6 +6,7 @@ module SimpleFormAutoSelect2
 
         included do
           autoload :Select2Input
+          autoload :AjaxSelect2Input
         end
       end
     end
