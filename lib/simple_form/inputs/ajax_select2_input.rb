@@ -27,11 +27,6 @@ class SimpleForm::Inputs::AjaxSelect2Input < SimpleForm::Inputs::StringInput
     multiple_by_options? || multiple_by_association?
   end
 
-  # def value
-  #   val = object.send(association_primary_key)
-  #   val.is_a?(Array) ? val.join(',') : val
-  # end
-
   def multiple_by_association?
     reflection && [ :has_many, :has_and_belongs_to_many ].include?(reflection.macro)
   end
