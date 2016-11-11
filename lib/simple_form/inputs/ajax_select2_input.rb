@@ -20,11 +20,18 @@ class SimpleForm::Inputs::AjaxSelect2Input < SimpleForm::Inputs::StringInput
       css_classes << 'multiple'
     end
     input_options[:class] = css_classes.compact
+    input_options[:value] = value
     input_options
   end
 
   def multiple?
     multiple_by_options? || multiple_by_association?
+  end
+
+  def value
+    val = object.public_send(attribute_name)
+    val = val.join(',') if val.is_a?(Array)
+    val
   end
 
   def multiple_by_association?
