@@ -29,7 +29,7 @@ class SimpleForm::Inputs::AjaxSelect2Input < SimpleForm::Inputs::StringInput
   end
 
   def value
-    val = object.public_send(attribute_name)
+    val = object.send(attribute_name)
     val = val.join(',') if val.is_a?(Array)
     val
   end
